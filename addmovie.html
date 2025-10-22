@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Add Movie — StreamShare Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container{
+      max-width:600px;margin:40px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.1)
+    }
+    .form-container h2{text-align:center;color:var(--accent);margin-bottom:20px}
+    .form-container label{display:block;margin:10px 0 4px;font-weight:600}
+    .form-container input, .form-container textarea{
+      width:100%;padding:8px 12px;border-radius:6px;border:1px solid #ccc;margin-bottom:12px
+    }
+    .form-container button{background:var(--accent);color:#fff;padding:10px 16px;border:none;border-radius:8px;cursor:pointer;width:100%}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">← Back</a>
+    <h1>Add New Movie</h1>
+  </header>
+
+  <main class="container">
+    <div class="form-container">
+      <h2>New Movie Details</h2>
+      <form action="addmovie.php" method="post" enctype="multipart/form-data">
+        <label>Title</label>
+        <input type="text" name="title" required>
+
+        <label>Year</label>
+        <input type="number" name="year" required>
+
+        <label>Description</label>
+        <textarea name="desc" rows="4" required></textarea>
+
+        <label>Poster Image</label>
+        <input type="file" name="thumb" accept="image/*" required>
+
+        <label>Download URL</label>
+        <input type="url" name="download" required>
+
+        <button type="submit">Add Movie</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
