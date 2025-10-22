@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Request a Movie — Movies master</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .request-container { max-width:500px; margin:50px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 6px 18px rgba(12,15,25,0.06); }
+    .request-container h2 { text-align:center; margin-bottom:20px; color:#454df4; }
+    .request-container input, .request-container textarea { width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:6px; }
+    .request-container button { background:#454df4; color:white; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; width:100%; font-weight:600; margin-top:12px; }
+    .request-container button:hover { background:#454df4; }
+  </style>
+</head>
+<body>
+  <header style="padding:18px 24px; background:#f6f8fb; display:flex; align-items:center;">
+    <a href="index.html" style="text-decoration:none;color:#5568fc;font-weight:700;">← Home</a>
+    <h1 style="margin-left:16px;">Request a Movie</h1>
+  </header>
+
+  <main>
+    <div class="request-container">
+      <h2>Send Your Movie Request</h2>
+      <!-- Formspree form -->
+      <form id="requestFormPage" action="https://formspree.io/f/xovkovbq" method="POST">
+        <label for="movieName">Movie Name:</label>
+        <input type="text" id="movieName" name="movieName" placeholder="Enter movie name" required>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" placeholder="Enter release year" required min="1900" max="2100">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+        <label for="message">Message (optional):</label>
+        <textarea id="message" name="message" placeholder="Additional info"></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Optional: handle success/fail messages via JS
+    const form = document.getElementById('requestFormPage');
+    form.addEventListener('submit', (e)=>{
+      // Can show a success message without redirect
+      // Formspree will handle submission via action URL
+      setTimeout(()=>{
+        alert('Your movie request has been sent successfully!');
+        form.reset();
+      }, 500);
+    });
+  </script>
+</body>
+</html>
