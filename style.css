@@ -23,7 +23,7 @@ button{background:var(--accent);border:none;color:white;padding:10px 14px;border
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
 .card{background:var(--card);border-radius:10px;padding:8px;box-shadow:0 6px 18px rgba(12,15,25,0.06);overflow:hidden;cursor:pointer;transition:0.3s}
 .card:hover{transform:scale(1.05)}
-.thumb{width:100%;height:140px;background:#ddd;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+.thumb{width:`100%;height:140px;background:#ddd;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
 .thumb img{width:100%;height:100%;object-fit:cover;border-radius:6px}
 .meta{padding:8px}
 .title{font-size:15px;font-weight:600;margin-bottom:6px}
@@ -35,3 +35,159 @@ button{background:var(--accent);border:none;color:white;padding:10px 14px;border
 .ad-slot{border:2px dashed #e6eef0;border-radius:8px;padding:12px;text-align:center;color:var(--muted);margin:12px 0}
 footer{margin-top:28px;padding:30px 0;color:var(--muted);text-align:center}
 @media(max-width:600px){.player-card img{width:90%}}
+/* --- Top Banner --- */
+/* Trending Banner Styles (Royal Blue Theme) */
+.banner {
+  width: 90%;
+  margin: 20px auto;
+  background: linear-gradient(120deg, #6e88fd, #515cf3);
+  border-radius: 12px;
+  padding: 16px;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.announcement {
+  background: rgba(255,255,255,0.12);
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+}
+
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.trending-header h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.view-all {
+  color: #ffffff;
+  font-size: 14px;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.view-all:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.trending-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.trending-list::-webkit-scrollbar {
+  height: 6px;
+}
+.trending-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+}
+
+.trending-item {
+  min-width: 140px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.trending-item:hover {
+  transform: scale(1.05);
+}
+
+.trending-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.trending-item span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.search-preview {
+  position:absolute;
+  margin-top: 40px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+  display: none;
+  z-index: 100;
+}
+
+.search-preview div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.search-preview div:hover {
+  background: #f0f0f0;
+}
+#subscribeBtn {
+  position: fixed;
+  bottom: 20px;    /* distance from bottom */
+  right: 20px;     /* distance from right */
+  background: #354cf8;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#subscribeBtn:hover {
+  background: #1f2dbb;
+  transform: translateY(-3px);
+}
+#requestBtn {
+  position: fixed;
+  bottom: 70px;    /* distance from bottom */
+  right: 20px;     /* distance from right */
+  background: #354cf8;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#requestBtn:hover {
+  background: #1f2dbb;
+  transform: translateY(-3px);
+}

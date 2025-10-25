@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Moviesmaster — Movie Downloader</title>
+  <title>MoviOne — Movie Downloader</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,30 +11,56 @@
     <div class="brand">Movies Master</div>
     <div class="searchbar">
       <input id="searchInput" type="search" placeholder="Search movies, genres..." aria-label="search" />
+      <div id="searchPreview" class="search-preview"></div>
       <button id="searchBtn">Search</button>
+      <div id="searchPreview" class="search-preview"></div>
     </div>
   </header>
 
   <main class="container">
     <!-- Ad slot top -->
     <div class="ad-slot" id="adTop">Ad Slot</div>
+    <!-- Top Announcement Banner -->
+<!-- Trending & Announcement Banner -->
+<section class="banner">
+  <div class="announcement" id="announcement">
+    🎬 Welcome to MoviOne — Enjoy latest trending movies!
+  </div>
+
+  <div class="trending">
+    <div class="trending-header">
+      <h3>🔥 Trending Movies</h3>
+      <a href="all-trending.html" class="view-all">View All</a>
+    </div>
+
+    <div class="trending-list" id="trendingList">
+      <!-- Trending movies will load dynamically from trending.json -->
+      <div class="loading">Loading Trending Movies...</div>
+    </div>
+  </div>
+</section>
+
+
 
     <section>
       <h3>Movies</h3>
       <div class="grid" id="videoGrid">
         <!-- cards populated by JS -->
       </div>
+      
     </section>
 
+    
     <!-- Ad slot inline -->
     <div class="ad-slot" id="adInline">Inline Ad Slot</div>
     <!-- Request a Movie Button -->
-<div style="text-align: right; margin-top:16px;">
-  <a href="request.html" 
-     style="display:inline-block;background:#454df4;color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;">
-    Request a Movie
-  </a>
-</div>
+  <a href="request.html" id="requestBtn" title="request For Movies">
+  Request for movie
+</a>
+<!-- Floating Subscribe Button -->
+<a href="subscribe.html" id="subscribeBtn" title="Subscribe for Updates">
+  Subscribe
+</a>
 
 
 
