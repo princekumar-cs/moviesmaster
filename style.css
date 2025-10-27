@@ -178,17 +178,18 @@ footer{margin-top:28px;padding:30px 0;color:var(--muted);text-align:center}
 }
 #subscribeBtn { bottom: 20px; }
 #requestBtn { bottom: 70px; }
-#subscribeBtn:hover, #requestBtn:hover {
+#subscribeBtn:hover, #requestBtn:hover,#aboutBtn:hover {
   background: #1f2dbb;
   transform: translateY(-3px);
 }
 
 /* --- Responsive Floating Buttons --- */
 @media(max-width:600px){
-  #subscribeBtn, #requestBtn {
+  #subscribeBtn, #requestBtn ,#aboutBtn{
     right: 10px;
     padding: 10px 16px;
     font-size: 14px;
   }
   #requestBtn { bottom: 60px; }
 }
+
