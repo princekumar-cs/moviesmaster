@@ -163,9 +163,8 @@ footer{margin-top:28px;padding:30px 0;color:var(--muted);text-align:center}
 }
 
 /* --- Floating Buttons --- */
-#subscribeBtn, #requestBtn {
+#subscribeBtn, #requestBtn, #aboutBtn {
   position: fixed;
-  right: 20px;
   background: var(--accent);
   color: #fff;
   padding: 12px 20px;
@@ -176,20 +175,37 @@ footer{margin-top:28px;padding:30px 0;color:var(--muted);text-align:center}
   transition: all 0.3s ease;
   z-index: 1000;
 }
-#subscribeBtn { bottom: 20px; }
-#requestBtn { bottom: 70px; }
-#subscribeBtn:hover, #requestBtn:hover,#aboutBtn:hover {
+
+#subscribeBtn {
+  bottom: 20px;
+  right: 20px;
+}
+
+#requestBtn {
+  bottom: 70px;
+  right: 20px;
+}
+
+#aboutBtn {
+  bottom: 20px;
+  left: 20px; /* shifted to left */
+}
+
+#subscribeBtn:hover,
+#requestBtn:hover,
+#aboutBtn:hover {
   background: #1f2dbb;
   transform: translateY(-3px);
 }
 
 /* --- Responsive Floating Buttons --- */
 @media(max-width:600px){
-  #subscribeBtn, #requestBtn ,#aboutBtn{
-    right: 10px;
+  #subscribeBtn, #requestBtn, #aboutBtn {
     padding: 10px 16px;
     font-size: 14px;
   }
-  #requestBtn { bottom: 60px; }
+  #subscribeBtn { bottom: 10px; right: 10px; }
+  #requestBtn { bottom: 60px; right: 10px; }
+  #aboutBtn { bottom: 10px; left: 10px; } /* also adjusts nicely for small screens */
 }
 
